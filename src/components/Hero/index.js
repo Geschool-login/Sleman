@@ -9,7 +9,7 @@ function Hero(props) {
         <div className="col-12 hero-container">
             <div style={{ backgroundImage: `linear-gradient(171.31deg, rgba(0, 0, 0, 0.63) 81.78%, rgba(255, 255, 255, 0) 95.16%), url(${props.background})` }} className="hero-background col-12"></div>
             <div className="col-12 hero">
-                <div className="content-container">
+                <div className="content-container mb-5">
                     <div className="col-xs-12 col-sm-7 col-md-6 col-lg-8 left-side text-light" data-page={props.appName}>
                         <div className="title-container">
                             <div className="mb-3 logo">
@@ -52,6 +52,19 @@ function Hero(props) {
                         {props.children}
                     </div>
 
+                </div>
+                <div className="data-container mb-5">
+                    <div className="data-box d-flex">
+                        <div className="data-item">
+                            Yuhuu
+                        </div>
+                        <div className="data-item border-white">
+                            Yuhuu
+                        </div>
+                        <div className="data-item">
+                            Yuhuu
+                        </div>
+                    </div>
                 </div>
 
             </div>

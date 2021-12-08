@@ -89,6 +89,29 @@
     line-height: normal;
 }
 
+.data-container {
+    padding: 5vh 25vh;
+    width: 100%;
+}
+
+.data-container .data-box {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 5vh 5vh;
+    border-radius: 10px;
+    color: #fff;
+}
+
+.data-item {
+    height: 100%;
+    text-align: center;
+    width: 33.3%;
+}
+
+.border-white {
+    border-right: 2px solid #fff;
+    border-left: 2px solid #fff;
+}
+
 
 @media (max-width: 991px) {
     .hero .content-container {
