@@ -29,7 +29,6 @@ function App(props) {
           <Route exact path="/reset" ><Reset /></Route>
           <Route ><Error404 /></Route>
         </Switch>
-
       </Router>
   );
 }
