@@ -95,29 +95,6 @@
     color: #fff;
 }
 
-.data-container .data-box {
-    background: rgba(255, 255, 255, 0.2);
-    padding: 15px;
-    border-radius: 10px;
-}
-
-.data-container .data-box .data-item {
-    height: 100%;
-    text-align: center;
-    width: 33.3%;
-    padding: 15px 0;
-}
-
-.data-container .data-box .data-item input {
-    font-size: 30px;
-    text-align: center;
-}
-
-.border-white {
-    border-right: 2px solid #fff;
-    border-left: 2px solid #fff;
-}
-
 .mr-3 {
     margin-right: 15px !important;
 }
@@ -126,36 +103,19 @@
     text-align: center;
 }
 
-.carousel-container {
-    
-}
-
 .border {
     border: 1px solid #fff;
 }
 
-.fieldset {
-    border: 2px groove #fff !important;
-    padding: 0.3em !important;
-    /* margin: 0 0 1.5em 0 !important; */
-    border-radius: 5px;
-    height: auto;
-    font-size: 30px;
-}
-
-.legend {
-    width:auto; /* Or auto */
-    padding:0 5px; /* To give a bit of padding on the left and right */
-    border-bottom:none;
-    text-align: right;
-    font-size: 12px;
-    margin-bottom: 0px !important;
-}
+.data-mobile {
+        display: none !important;
+    }
 
 
 @media (max-width: 991px) {
     .hero .content-container {
-        padding: 5vh;
+        padding: 5vh 5vh;
+        min-height: 60vh;
     }
 
     .hero .content-container .left-side {
@@ -176,6 +136,10 @@
     .slogan {
         margin-top: 5vh;
         text-align: justify;
+    }
+
+    .data-container {
+        padding: 5vh;
     }
 }
 
@@ -207,6 +171,19 @@
 
     .deskripsi {
         width: 70%;
+    }
+
+    .data-container {
+        padding: 0;
+        flex-direction: column;
+    }
+
+    .data {
+        display: none;
+    }
+
+    .data-mobile {
+        display: block !important;
     }
 
     
