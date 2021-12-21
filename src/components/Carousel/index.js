@@ -12,7 +12,7 @@ function Index() {
 
     const getLogos = async () => {
         try {
-            let response = await axios.get('https://sleman.geschool.net/_api/main/stats')
+            let response = await axios.get('_api/main/stats')
             setLogos(response.data.items)
         } catch(e) {
             console.log(e.message)
@@ -24,21 +24,22 @@ function Index() {
     }, [])
 
     const carouselProperties = {
-        slidesToShow: 5,
+        slidesToShow: logos.length < 5 ? logos.length : 5,
         centerMode: false,
-        centerPadding: "170px",
+        // centerPadding: "170px",
+        rows: 1,
         responsive: [
             {
                 breakpoint: 767,
                 settings: {
-                    slidesToShow: 2,
+                    slidesToShow: logos.length < 2 ? logos.length : 2,
                     centerMode: false,
                 },
             },
             {
                 breakpoint: 991,
                 settings: {
-                    slidesToShow: 3,
+                    slidesToShow: logos.length < 3 ? logos.length : 3,
                     centerMode: false,
                 },
             },
@@ -46,21 +47,41 @@ function Index() {
     };
 
     return (
-        <Slider {...carouselProperties}
-            autoplay
-            autoplaySpeed={2000}
-        >
+        <div className='school-list-container'>
             {
-                logos.map((item) => (
-                    <div className="item mr-3">
-                        <div className="col-xs-4 d-flex flex-column align-items-center">
-                            {item.icon === '' ? <img src={LogoEmpty} alt="" className="img-responsive mb-3 logo-img" /> : <img src={`https://sleman.geschool.net${item.icon}`} alt="" className="img-responsive mb-3 logo-img" />}
-                            <p>{item.name}</p>
-                        </div>
-                    </div>
-                ))
+                logos.length > 0 ?
+                <div>
+                <h4 className="mb-5">Mereka telah bergabung bersama Geschool</h4>
+                    <Slider {...carouselProperties}
+                        autoplay
+                        autoplaySpeed={2000}
+                    >
+                        {
+                            logos.map((item, index) => (
+                                <div key={index} className="item mr-3">
+                                    <div className="col-xs-4 d-flex flex-column align-items-center">
+                                        {
+                                            item.icon === '' ? 
+                                                <div alt="logo-school" className="img-responsive mb-3 logo-img">
+                                                    <img src={LogoEmpty} alt="" />
+                                                </div> 
+                                            : 
+                                                <div alt="logo-school" className="img-responsive mb-3 logo-img" >
+                                                    <img src={item.icon} alt="" />
+                                                </div>
+                                        }
+                                        <p>{item.name}</p>
+                                    </div>
+                                </div>
+                            ))
+                        }
+                    </Slider>
+                </div>
+                :
+                ''
             }
-        </Slider>
+       
+        </div>
     )
 }
 

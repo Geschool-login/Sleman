@@ -12,7 +12,8 @@ import logo from '../../assets/img/logo/logo.png'; //Logo
 function pageLayout( props ) {
     //EDITABLE
     const deskripsi = "Selamat datang kembali di"
-    const title = "Sleman Sembada Blended Learning"
+    const title1 = "Sleman Sembada"
+    const title2 = "Blended Learning"
     const slogan = "Hanya pendidikan yang bisa menyelamatkan masa depan, tanpa pendidikan Indonesia tak mungkin bertahan."
     const copyright = "2021 Sleman Sembada Blended Learning - Didukung oleh Geschool"
 
@@ -23,7 +24,8 @@ function pageLayout( props ) {
                 logo={logo}
                 background={background}
                 deskripsi={deskripsi}
-                title={title}
+                title1={title1}
+                title2={title2}
                 slogan={slogan}
                 appName={props.appName}
             >
