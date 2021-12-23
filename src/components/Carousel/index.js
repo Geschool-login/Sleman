@@ -62,12 +62,12 @@ function Index() {
                                     <div className="col-xs-4 d-flex flex-column align-items-center">
                                         {
                                             item.icon === '' ? 
-                                                <div alt="logo-school" className="img-responsive mb-3 logo-img">
-                                                    <img src={LogoEmpty} alt="" />
+                                                <div className="img-responsive mb-3 logo-img">
+                                                    <img src={LogoEmpty} alt="logo-school" />
                                                 </div> 
                                             : 
-                                                <div alt="logo-school" className="img-responsive mb-3 logo-img" >
-                                                    <img src={item.icon} alt="" />
+                                                <div className="img-responsive mb-3 logo-img" >
+                                                    <img src={item.icon} alt="logo-school" />
                                                 </div>
                                         }
                                         <p>{item.name}</p>
